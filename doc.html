@@ -1,0 +1,157 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module miniabm</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>miniabm</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/david/PycharmProjects/miniabm/miniabm/miniabm.py">/home/david/PycharmProjects/miniabm/miniabm/miniabm.py</a></font></td></tr></table>
+    <p><tt>miniabm&nbsp;is&nbsp;a&nbsp;minimalist&nbsp;<a href="#agent">agent</a>&nbsp;based&nbsp;modeling&nbsp;tool&nbsp;for&nbsp;python.<br>
+This&nbsp;package&nbsp;allows&nbsp;the&nbsp;user&nbsp;to&nbsp;easily&nbsp;create&nbsp;objects&nbsp;with&nbsp;prespecified&nbsp;attributes,&nbsp;group&nbsp;the&nbsp;objects&nbsp;according&nbsp;the&nbsp;their&nbsp;attributes&nbsp;and&nbsp;change&nbsp;them&nbsp;in&nbsp;a&nbsp;batch.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="miniabm.html#agent">agent</a>
+</font></dt><dt><font face="helvetica, arial"><a href="miniabm.html#agents">agents</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="agent">class <strong>agent</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>This&nbsp;class&nbsp;has&nbsp;one&nbsp;predefined&nbsp;attribute:&nbsp;id.&nbsp;The&nbsp;id&nbsp;attribute&nbsp;is&nbsp;an&nbsp;identification&nbsp;number&nbsp;generated&nbsp;for&nbsp;each&nbsp;newly&nbsp;created&nbsp;object&nbsp;of&nbsp;this&nbsp;class.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="agent-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="agents">class <strong>agents</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>An&nbsp;object&nbsp;of&nbsp;this&nbsp;class&nbsp;has&nbsp;two&nbsp;predefined&nbsp;attributes:&nbsp;olist&nbsp;and&nbsp;selection.&nbsp;Both&nbsp;are&nbsp;initialized&nbsp;as&nbsp;empty&nbsp;lists.<br>
+olist&nbsp;is&nbsp;a&nbsp;list&nbsp;containing&nbsp;all&nbsp;objects&nbsp;created&nbsp;under&nbsp;the&nbsp;class&nbsp;<a href="#agent">agent</a>&nbsp;with&nbsp;method&nbsp;crt.<br>
+selection&nbsp;consists&nbsp;of&nbsp;a&nbsp;the&nbsp;last&nbsp;object&nbsp;selection&nbsp;made&nbsp;(with&nbsp;methods&nbsp;returning&nbsp;self).<br>
+All&nbsp;methods&nbsp;returning&nbsp;self&nbsp;will&nbsp;change&nbsp;the&nbsp;current&nbsp;selection&nbsp;list&nbsp;and<br>
+can&nbsp;be&nbsp;used&nbsp;in&nbsp;dot&nbsp;notation&nbsp;following&nbsp;any&nbsp;other&nbsp;method&nbsp;returning&nbsp;the&nbsp;same&nbsp;thing.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="agents-__call__"><strong>__call__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="agents-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="agents-clone"><strong>clone</strong></a>(self, arg)</dt><dd><tt>Clone&nbsp;objects&nbsp;under&nbsp;selection<br>
+&nbsp;<br>
+:param&nbsp;arg:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;clones<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="agents-crt"><strong>crt</strong></a>(self, arg, **kwargs)</dt><dd><tt>Create&nbsp;new&nbsp;<a href="#agent">agent</a>&nbsp;objects&nbsp;and&nbsp;set&nbsp;their&nbsp;attributes<br>
+&nbsp;<br>
+:param&nbsp;arg:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;number&nbsp;of&nbsp;new&nbsp;objects<br>
+&nbsp;<br>
+:param&nbsp;kwargs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;attributes&nbsp;and&nbsp;corresponding&nbsp;values&nbsp;or&nbsp;functions<br>
+&nbsp;<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="agents-ids"><strong>ids</strong></a>(self)</dt><dd><tt>List&nbsp;all&nbsp;id&nbsp;numbers&nbsp;of&nbsp;the&nbsp;current&nbsp;object&nbsp;selection<br>
+&nbsp;<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;integers</tt></dd></dl>
+
+<dl><dt><a name="agents-n_of"><strong>n_of</strong></a>(self, arg)</dt><dd><tt>Sample&nbsp;a&nbsp;specified&nbsp;number&nbsp;of&nbsp;objects&nbsp;under&nbsp;selection<br>
+&nbsp;<br>
+:param&nbsp;arg:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;samples<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="agents-other"><strong>other</strong></a>(self)</dt><dd><tt>Select&nbsp;all&nbsp;objects&nbsp;other&nbsp;than&nbsp;the&nbsp;current&nbsp;selection<br>
+&nbsp;<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="agents-remove"><strong>remove</strong></a>(self)</dt><dd><tt>Remove&nbsp;all&nbsp;objects&nbsp;under&nbsp;selection<br>
+&nbsp;<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="agents-set"><strong>set</strong></a>(self, repeat<font color="#909090">=1</font>, **kwargs)</dt><dd><tt>Set&nbsp;or&nbsp;change&nbsp;attributes&nbsp;of&nbsp;objects&nbsp;under&nbsp;selection<br>
+&nbsp;<br>
+:param&nbsp;repeat:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;integer&nbsp;number&nbsp;indicating&nbsp;the&nbsp;number&nbsp;of&nbsp;repetitions&nbsp;(DEFAULT=1)<br>
+:param&nbsp;kwargs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;attributes&nbsp;and&nbsp;corresponding&nbsp;values&nbsp;or&nbsp;functions<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="agents-show"><strong>show</strong></a>(self)</dt><dd><tt>Print&nbsp;object's&nbsp;dictionaries</tt></dd></dl>
+
+<dl><dt><a name="agents-slist"><strong>slist</strong></a>(self)</dt><dd><tt>List&nbsp;objects&nbsp;under&nbsp;selection<br>
+&nbsp;<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;objects</tt></dd></dl>
+
+<dl><dt><a name="agents-tell"><strong>tell</strong></a>(self, arg)</dt><dd><tt>List&nbsp;all&nbsp;values&nbsp;of&nbsp;a&nbsp;specified&nbsp;attribute&nbsp;for&nbsp;the&nbsp;current&nbsp;object&nbsp;selection<br>
+&nbsp;<br>
+:param&nbsp;arg:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;string&nbsp;specifying&nbsp;an&nbsp;attribute<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;attribute&nbsp;values</tt></dd></dl>
+
+<dl><dt><a name="agents-w"><strong>w</strong></a>(self, **kwargs)</dt><dd><tt>Select&nbsp;objects&nbsp;conditionally&nbsp;from&nbsp;the&nbsp;current&nbsp;object&nbsp;selection<br>
+&nbsp;<br>
+:param&nbsp;kwargs:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;attributes&nbsp;and&nbsp;corresponding&nbsp;values&nbsp;or&nbsp;functions<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="agents-w_max"><strong>w_max</strong></a>(self, *args)</dt><dd><tt>Select&nbsp;all&nbsp;objects&nbsp;with&nbsp;the&nbsp;maximum&nbsp;value&nbsp;of&nbsp;the&nbsp;specified&nbsp;attribute.&nbsp;More&nbsp;than&nbsp;one&nbsp;attribute&nbsp;can&nbsp;be&nbsp;specified<br>
+&nbsp;<br>
+:param&nbsp;args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;string&nbsp;specifying&nbsp;an&nbsp;attribute<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="agents-w_min"><strong>w_min</strong></a>(self, *args)</dt><dd><tt>Select&nbsp;all&nbsp;objects&nbsp;with&nbsp;the&nbsp;minimum&nbsp;value&nbsp;of&nbsp;the&nbsp;specified&nbsp;attribute.&nbsp;More&nbsp;than&nbsp;one&nbsp;attribute&nbsp;can&nbsp;be&nbsp;specified<br>
+&nbsp;<br>
+:param&nbsp;args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;strings&nbsp;specifying&nbsp;attributes<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self</tt></dd></dl>
+
+<dl><dt><a name="agents-who"><strong>who</strong></a>(self, arg)</dt><dd><tt>Takes&nbsp;the&nbsp;current&nbsp;object&nbsp;selection&nbsp;and&nbsp;selects&nbsp;objects&nbsp;by&nbsp;their&nbsp;id<br>
+&nbsp;<br>
+:param&nbsp;args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;integer&nbsp;number<br>
+&nbsp;<br>
+:return:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;self</tt></dd></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

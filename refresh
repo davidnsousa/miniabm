@@ -1,0 +1,10 @@
+#!/bin/bash
+# update everything to facilitate local testing before push
+python3 setup.py sdist bdist_wheel
+cd miniabm
+pydoc -w miniabm
+mv miniabm.html doc.html
+mv doc.html ..
+cd ..
+cd ..
+pip install -e miniabm
